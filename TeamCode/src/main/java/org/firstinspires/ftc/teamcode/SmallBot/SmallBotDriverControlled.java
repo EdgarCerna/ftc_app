@@ -32,7 +32,6 @@ public class SmallBotDriverControlled extends OpMode{
         double rightPower = leftTrigger + rightTrigger - rightStickX;
         double leftPower = leftTrigger + rightTrigger + rightStickX;
 
-
         robot.leftDrive.setPower(leftPower);
         robot.rightDrive.setPower(rightPower);
         
@@ -44,5 +43,7 @@ public class SmallBotDriverControlled extends OpMode{
     //RUN ONCE ON stop()
     @Override
     public void stop() {
+        robot.leftDrive.setPower(0);
+        robot.rightDrive.setPower(0);
     }
 }
