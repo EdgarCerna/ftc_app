@@ -36,37 +36,6 @@ public class EdgarDriverControlled extends OpMode{
         robot.frontRightDrive.setPower(rightPower);
         robot.rearRightDrive.setPower(rightPower);
         
-        /*
-        if (rightTrigger >= 0.05) {
-            //Drive Forwards
-            robot.frontLeftDrive.setPower(rightTrigger);
-            robot.rearLeftDrive.setPower(rightTrigger);
-            robot.frontRightDrive.setPower(rightTrigger);
-            robot.rearRightDrive.setPower(rightTrigger);
-        }
-        else if (leftTrigger <= -0.05) {
-            //Drive Backwards
-            robot.frontLeftDrive.setPower(leftTrigger);
-            robot.rearLeftDrive.setPower(leftTrigger);
-            robot.frontRightDrive.setPower(leftTrigger);
-            robot.rearRightDrive.setPower(leftTrigger);
-        }
-        else if (rightStickX * rightStickX > 0.01) {
-            //Turn Robot
-            robot.frontLeftDrive.setPower(rightStickX);
-            robot.rearLeftDrive.setPower(rightStickX);
-            robot.frontRightDrive.setPower(-rightStickX);
-            robot.rearRightDrive.setPower(-rightStickX);
-        }
-        else {
-            robot.frontLeftDrive.setPower(0);
-
-            robot.rearLeftDrive.setPower(0);
-            robot.frontRightDrive.setPower(0);
-            robot.rearRightDrive.setPower(0);
-        }
-        */
-        
         //Send Telemetry Data
         telemetry.addData("LeftPower",  "%.2f", leftTrigger);
         telemetry.addData("RightPower", "%.2f", rightTrigger);
@@ -75,5 +44,9 @@ public class EdgarDriverControlled extends OpMode{
     //RUN ONCE ON stop()
     @Override
     public void stop() {
+        robot.frontLeftDrive.setPower(0);
+        robot.rearLeftDrive.setPower(0);
+        robot.frontRightDrive.setPower(0);
+        robot.rearRightDrive.setPower(0);
     }
 }
