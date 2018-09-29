@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.CompetitionRobot;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class CompetitionHardware
@@ -24,10 +25,10 @@ public class CompetitionHardware
         rearRightDrive = hardwareMap.get(DcMotor.class, "rearRightDrive");
         
         //SET MOTOR DIRECTION
-        frontLeftDrive.setDirection(DcMotor.Direction.FORWARD);
-        rearLeftDrive.setDirection(DcMotor.Direction.FORWARD);
-        frontRightDrive.setDirection(DcMotor.Direction.REVERSE);
-        rearRightDrive.setDirection(DcMotor.Direction.REVERSE);
+        frontLeftDrive.setDirection(DcMotor.Direction.REVERSE);
+        rearLeftDrive.setDirection(DcMotor.Direction.REVERSE);
+        frontRightDrive.setDirection(DcMotor.Direction.FORWARD);
+        rearRightDrive.setDirection(DcMotor.Direction.FORWARD);
         
         //SET ALL MOTOR setPower(0)
         frontLeftDrive.setPower(0);
