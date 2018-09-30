@@ -3,8 +3,6 @@ package org.firstinspires.ftc.teamcode.CompetitionRobot;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.SpeedyGonzalez.EdgarHardware;
-
 @TeleOp(name="CompetitionDriverControlled", group="TeleOp")
 
 public class CompetitionDriverControlled extends OpMode{
