@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.CompetitionRobot;
 
 import com.qualcomm.hardware.bosch.BNO055IMU;
+import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -15,7 +16,7 @@ public class CompetitionHardware
     public DcMotor rearRightDrive = null;
 
     //INSTANTIATE SENSORS
-    public GyroSensor gyro;
+    public ModernRoboticsI2cGyro gyro;
 
     // Local OpMode members
     HardwareMap hardwareMap;
@@ -30,7 +31,7 @@ public class CompetitionHardware
         rearRightDrive = hardwareMap.get(DcMotor.class, "rearRightDrive");
 
         //DEFINE SENSORS
-        gyro = hardwareMap.get(GyroSensor.class, "gyroSensor");
+        gyro = hardwareMap.get(ModernRoboticsI2cGyro.class, "gyroSensor");
         
         //SET MOTOR DIRECTION
         frontLeftDrive.setDirection(DcMotor.Direction.REVERSE);
