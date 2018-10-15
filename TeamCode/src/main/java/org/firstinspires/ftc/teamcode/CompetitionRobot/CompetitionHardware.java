@@ -16,7 +16,7 @@ public class CompetitionHardware
     public DcMotor rearRightDrive = null;
 
     //INSTANTIATE SENSORS
-    public ModernRoboticsI2cGyro gyro;
+    //public ModernRoboticsI2cGyro gyro;
 
     // Local OpMode members
     HardwareMap hardwareMap;
@@ -31,7 +31,7 @@ public class CompetitionHardware
         rearRightDrive = hardwareMap.get(DcMotor.class, "rearRightDrive");
 
         //DEFINE SENSORS
-        gyro = hardwareMap.get(ModernRoboticsI2cGyro.class, "gyroSensor");
+        ///gyro = hardwareMap.get(ModernRoboticsI2cGyro.class, "gyroSensor");
         
         //SET MOTOR DIRECTION
         frontLeftDrive.setDirection(DcMotor.Direction.REVERSE);
@@ -57,6 +57,6 @@ public class CompetitionHardware
         rearRightDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         //CALIBRATE SENSORS
-        gyro.calibrate();
+        //gyro.calibrate();
     }
 }

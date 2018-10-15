@@ -10,18 +10,12 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 @Autonomous(name="GoldAlign Example", group="Autonomous")
 
-public class GoldAlignExample extends OpMode
-{
+public class GoldAlignExample extends OpMode {
     private GoldAlignDetector detector;
     CompetitionHardware robot = new CompetitionHardware();
 
-    static final double     COUNTS_PER_MOTOR_REV    = 2240 ;    // eg: TETRIX Motor Encoder
-    static final double     DRIVE_GEAR_REDUCTION    = 1.0 ;     // This is < 1.0 if geared UP
-    static final double     WHEEL_DIAMETER_INCHES   = 3.54331 ;     // For figuring circumference
-    static final double     COUNTS_PER_INCH         = (COUNTS_PER_MOTOR_REV * DRIVE_GEAR_REDUCTION) /
-                                                        (WHEEL_DIAMETER_INCHES * 3.1415);
-    static final double     DRIVE_SPEED             = 0.2;
-    static final double     TURN_SPEED              = 0.1;
+    static final double DRIVE_SPEED = 0.3;
+    boolean newCommand = true;
 
     @Override
     public void init() {
@@ -72,29 +66,51 @@ public class GoldAlignExample extends OpMode
     @Override
     public void loop() {
         final int target = 320;
-        int centerCnt = 0;
-        double leftPower;
-        double rightPower;
+        //int centerCnt = 0;
+        double x = detector.getXPosition();
+        double e, eOld, de, ie = 0;
+        double kp = 0.1, kd = 0, ki = 0;
+        double leftPower, rightPower, turnSpeed;
 
-        while (centerCnt < 3) {
-            if (detector.getXPosition() < 320) {
-                robot.frontLeftDrive.setPower(TURN_SPEED);
-                robot.frontRightDrive.setPower(-TURN_SPEED);
-            }
-            else if (detector.getXPosition() > 320) {
-                robot.frontLeftDrive.setPower(-TURN_SPEED);
-                robot.frontRightDrive.setPower(TURN_SPEED);
-            }
-            else if (detector.getXPosition() == 320) {
-                centerCnt++;
-            }
+        e = x - target;
+        eOld = e;
+        if (newCommand == true)
+        {
+            de = 0;
+            newCommand = false;
         }
-        if (detector.getAligned() == true) {
-            encoderDrive(DRIVE_SPEED, 24, 24);
+        else
+        {
+            de = e - eOld;  //difference
+        }
+        ie += e;            //integration
+
+        turnSpeed = kp * e + kd * de + ki * ie;
+        if (turnSpeed > 0.3)
+        {
+            turnSpeed = 0.3;
+        }
+        else if (turnSpeed < -0.3)
+        {
+            turnSpeed = -0.3;
+        }
+        if (turnSpeed > 0) {
+            leftPower = DRIVE_SPEED + turnSpeed;
+            rightPower = DRIVE_SPEED;
+        }
+        else
+        {
+            leftPower = DRIVE_SPEED;
+            rightPower = DRIVE_SPEED - turnSpeed;
         }
 
-        telemetry.addData("IsAligned" , detector.getAligned()); // Is the bot aligned with the gold mineral
-        telemetry.addData("X Pos" , detector.getXPosition()); // Gold X pos.
+        robot.frontLeftDrive.setPower(leftPower);
+        robot.rearLeftDrive.setPower(leftPower);
+        robot.frontRightDrive.setPower(rightPower);
+        robot.rearRightDrive.setPower(rightPower);
+
+        telemetry.addData("IsAligned", detector.getAligned()); // Is the bot aligned with the gold mineral
+        telemetry.addData("X Pos", detector.getXPosition()); // Gold X pos.
     }
 
     /*
@@ -106,33 +122,4 @@ public class GoldAlignExample extends OpMode
         robot.frontLeftDrive.setPower(0);
         robot.frontRightDrive.setPower(0);
     }
-
-    public void encoderDrive(double speed,
-                             double leftInches, double rightInches) {
-        int newLeftTarget;
-        int newRightTarget;
-
-        // Determine new target position, and pass to motor controller
-        newLeftTarget = robot.frontLeftDrive.getCurrentPosition() + (int)(leftInches * COUNTS_PER_INCH);
-        newRightTarget = robot.frontRightDrive.getCurrentPosition() + (int)(rightInches * COUNTS_PER_INCH);
-        robot.frontLeftDrive.setTargetPosition(newLeftTarget);
-        robot.frontRightDrive.setTargetPosition(newRightTarget);
-
-        // Turn On RUN_TO_POSITION
-        robot.frontLeftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        robot.frontRightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-
-        // reset the timeout time and start motion.
-        robot.frontLeftDrive.setPower(Math.abs(speed));
-        robot.frontRightDrive.setPower(Math.abs(speed));
-
-        // Stop all motion;
-        robot.frontLeftDrive.setPower(0);
-        robot.frontRightDrive.setPower(0);
-
-        // Turn off RUN_TO_POSITION
-        robot.frontLeftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        robot.frontRightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-    }
-
 }

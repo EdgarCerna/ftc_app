@@ -29,14 +29,14 @@ public class CompetitionDriverControlled extends OpMode{
         double rightStickX = gamepad1.right_stick_x;
         double rightPowerT = leftTrigger + rightTrigger - rightStickX;
         double leftPowerT = leftTrigger + rightTrigger + rightStickX;
-        double rightPower = leftTrigger + rightTrigger;
-        double leftPower = leftTrigger + rightTrigger;
+//        double rightPower = leftTrigger + rightTrigger;
+//        double leftPower = leftTrigger + rightTrigger;
 
 
         robot.frontLeftDrive.setPower(leftPowerT);
-        robot.rearLeftDrive.setPower(leftPower);
+        robot.rearLeftDrive.setPower(leftPowerT);
         robot.frontRightDrive.setPower(rightPowerT);
-        robot.rearRightDrive.setPower(rightPower);
+        robot.rearRightDrive.setPower(rightPowerT);
         
         /*
         if (rightTrigger >= 0.05) {
