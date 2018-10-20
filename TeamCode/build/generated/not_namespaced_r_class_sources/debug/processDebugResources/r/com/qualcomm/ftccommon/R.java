@@ -407,9 +407,9 @@ public final class R {
         public static final int format_convert = 0x7f090006;
         public static final int nxtstartupsound = 0x7f090007;
         public static final int simple_vertex_shader = 0x7f090008;
-        public static final int texture_fragment_shader = 0x7f090009;
-        public static final int texture_vertex_shader = 0x7f09000a;
-        public static final int warningmessage = 0x7f09000b;
+        public static final int texture_fragment_shader = 0x7f09000a;
+        public static final int texture_vertex_shader = 0x7f09000b;
+        public static final int warningmessage = 0x7f09000c;
     }
     public static final class string {
         private string() {}

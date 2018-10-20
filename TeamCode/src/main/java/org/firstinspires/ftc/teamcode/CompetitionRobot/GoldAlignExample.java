@@ -1,12 +1,15 @@
 package org.firstinspires.ftc.teamcode.CompetitionRobot;
 
+import android.media.MediaPlayer;
+
 import com.disnodeteam.dogecv.CameraViewDisplay;
 import com.disnodeteam.dogecv.DogeCV;
 import com.disnodeteam.dogecv.detectors.roverrukus.GoldAlignDetector;
-import com.disnodeteam.dogecv.detectors.roverrukus.SamplingOrderDetector;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
+
+import org.firstinspires.ftc.teamcode.R;
 
 @Autonomous(name="GoldAlign Example", group="Autonomous")
 
@@ -47,6 +50,8 @@ public class GoldAlignExample extends OpMode {
 
         detector.enable();
 
+        MediaPlayer sonicSong = MediaPlayer.create(hardwareMap.appContext, R.raw.sonicsong);
+        sonicSong.start();
 
     }
 
@@ -65,12 +70,15 @@ public class GoldAlignExample extends OpMode {
 
     @Override
     public void loop() {
+        resetStartTime();
+
         final int target = 320;
         //int centerCnt = 0;
         double x = detector.getXPosition();
         double e, eOld, de, ie = 0;
         double kp = 0.1, kd = 0, ki = 0;
         double leftPower, rightPower, turnSpeed;
+        int cnt = 0;
 
         e = x - target;
         eOld = e;
@@ -109,8 +117,16 @@ public class GoldAlignExample extends OpMode {
         robot.frontRightDrive.setPower(rightPower);
         robot.rearRightDrive.setPower(rightPower);
 
+        cnt++;
+        if (cnt == 100)
+        {
+            telemetry.addData("Time After 100", getRuntime());
+            telemetry.update();
+        }
+
         telemetry.addData("IsAligned", detector.getAligned()); // Is the bot aligned with the gold mineral
         telemetry.addData("X Pos", detector.getXPosition()); // Gold X pos.
+        telemetry.update();
     }
 
     /*

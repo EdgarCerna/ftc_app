@@ -29,53 +29,32 @@ public class CompetitionDriverControlled extends OpMode{
         double rightStickX = gamepad1.right_stick_x;
         double rightPowerT = leftTrigger + rightTrigger - rightStickX;
         double leftPowerT = leftTrigger + rightTrigger + rightStickX;
-//        double rightPower = leftTrigger + rightTrigger;
-//        double leftPower = leftTrigger + rightTrigger;
-
 
         robot.frontLeftDrive.setPower(leftPowerT);
         robot.rearLeftDrive.setPower(leftPowerT);
         robot.frontRightDrive.setPower(rightPowerT);
         robot.rearRightDrive.setPower(rightPowerT);
-        
-        /*
-        if (rightTrigger >= 0.05) {
-            //Drive Forwards
-            robot.frontLeftDrive.setPower(rightTrigger);
-            robot.rearLeftDrive.setPower(rightTrigger);
-            robot.frontRightDrive.setPower(rightTrigger);
-            robot.rearRightDrive.setPower(rightTrigger);
-        }
-        else if (leftTrigger <= -0.05) {
-            //Drive Backwards
-            robot.frontLeftDrive.setPower(leftTrigger);
-            robot.rearLeftDrive.setPower(leftTrigger);
-            robot.frontRightDrive.setPower(leftTrigger);
-            robot.rearRightDrive.setPower(leftTrigger);
-        }
-        else if (rightStickX * rightStickX > 0.01) {
-            //Turn Robot
-            robot.frontLeftDrive.setPower(rightStickX);
-            robot.rearLeftDrive.setPower(rightStickX);
-            robot.frontRightDrive.setPower(-rightStickX);
-            robot.rearRightDrive.setPower(-rightStickX);
-        }
-        else {
-            robot.frontLeftDrive.setPower(0);
 
-            robot.rearLeftDrive.setPower(0);
-            robot.frontRightDrive.setPower(0);
-            robot.rearRightDrive.setPower(0);
-        }
-        */
+        if (gamepad1.right_bumper)
+            robot.liftMotor.setPower(1);
+        else if (gamepad1.left_bumper)
+            robot.liftMotor.setPower(-1);
+        else
+            robot.liftMotor.setPower(0);
         
         //Send Telemetry Data
         telemetry.addData("LeftPower",  "%.2f", leftTrigger);
         telemetry.addData("RightPower", "%.2f", rightTrigger);
+        telemetry.update();
     }
 
     //RUN ONCE ON stop()
     @Override
     public void stop() {
+        robot.frontLeftDrive.setPower(0);
+        robot.rearLeftDrive.setPower(0);
+        robot.frontRightDrive.setPower(0);
+        robot.rearRightDrive.setPower(0);
+        robot.liftMotor.setPower(0);
     }
 }

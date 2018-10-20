@@ -96,6 +96,10 @@
         "source": "C:\\Users\\cerna\\.gradle\\caches\\transforms-1\\files-1.1\\FtcCommon-release.aar\\d675279488c079695c00be15f2e8deaa\\res\\layout\\template_info.xml"
     },
     {
+        "merged": "C:\\Users\\cerna\\Desktop\\ftc_app\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw_sonicsong.mp3.flat",
+        "source": "C:\\Users\\cerna\\Desktop\\ftc_app\\TeamCode\\src\\main\\res\\raw\\sonicsong.mp3"
+    },
+    {
         "merged": "C:\\Users\\cerna\\Desktop\\ftc_app\\TeamCode\\build\\intermediates\\res\\merged\\debug\\layout_info_button.xml.flat",
         "source": "C:\\Users\\cerna\\.gradle\\caches\\transforms-1\\files-1.1\\FtcCommon-release.aar\\d675279488c079695c00be15f2e8deaa\\res\\layout\\info_button.xml"
     },

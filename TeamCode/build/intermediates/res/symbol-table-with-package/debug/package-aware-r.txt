@@ -403,6 +403,7 @@ raw errormessage
 raw format_convert
 raw nxtstartupsound
 raw simple_vertex_shader
+raw sonicsong
 raw texture_fragment_shader
 raw texture_vertex_shader
 raw warningmessage

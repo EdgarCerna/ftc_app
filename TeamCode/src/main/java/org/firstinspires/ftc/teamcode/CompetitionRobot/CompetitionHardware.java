@@ -14,6 +14,7 @@ public class CompetitionHardware
     public DcMotor frontRightDrive = null;
     public DcMotor rearLeftDrive = null;
     public DcMotor rearRightDrive = null;
+    public DcMotor liftMotor = null;
 
     //INSTANTIATE SENSORS
     //public ModernRoboticsI2cGyro gyro;
@@ -29,6 +30,7 @@ public class CompetitionHardware
         frontRightDrive = hardwareMap.get(DcMotor.class, "frontRightDrive");
         rearLeftDrive = hardwareMap.get(DcMotor.class, "rearLeftDrive");
         rearRightDrive = hardwareMap.get(DcMotor.class, "rearRightDrive");
+        liftMotor = hardwareMap.get(DcMotor.class, "liftMotor");
 
         //DEFINE SENSORS
         ///gyro = hardwareMap.get(ModernRoboticsI2cGyro.class, "gyroSensor");
@@ -38,23 +40,27 @@ public class CompetitionHardware
         rearLeftDrive.setDirection(DcMotor.Direction.REVERSE);
         frontRightDrive.setDirection(DcMotor.Direction.FORWARD);
         rearRightDrive.setDirection(DcMotor.Direction.FORWARD);
+        liftMotor.setDirection(DcMotor.Direction.FORWARD);
         
         //SET ALL MOTOR setPower(0)
         frontLeftDrive.setPower(0);
         frontRightDrive.setPower(0);
         rearRightDrive.setPower(0);
         rearLeftDrive.setPower(0);
+        liftMotor.setPower(0);
 
         //SET ALL MOTORS TO RUN_WITHOUT_ENCODER
         frontLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         frontRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rearLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rearRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        liftMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         frontLeftDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         frontRightDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         rearLeftDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         rearRightDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        liftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         //CALIBRATE SENSORS
         //gyro.calibrate();
