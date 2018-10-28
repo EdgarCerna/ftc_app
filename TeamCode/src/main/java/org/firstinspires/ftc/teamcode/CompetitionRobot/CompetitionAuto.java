@@ -77,6 +77,7 @@ public class CompetitionAuto extends LinearOpMode{
 
         //driveToGold();
     }
+
     private void driveToGold(){
         //VARIABLES
         final int target = 320;
@@ -124,12 +125,14 @@ public class CompetitionAuto extends LinearOpMode{
         robot.frontRightDrive.setPower(rightPower);
         robot.rearRightDrive.setPower(rightPower);
     }
+
     private void moveLiftMotor(int ticks, double speed){
         int lmPos = robot.liftMotor.getCurrentPosition() + ticks;
         robot.liftMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         robot.liftMotor.setTargetPosition(lmPos);
         robot.liftMotor.setPower(speed);
     }
+
     private void moveDriveEncoder(int ticksLeft, int ticksRight, double speed){
         int lfPose = robot.frontLeftDrive.getCurrentPosition() + ticksLeft;
         int lrPose = robot.rearLeftDrive.getCurrentPosition() + ticksLeft;
@@ -162,5 +165,4 @@ public class CompetitionAuto extends LinearOpMode{
         robot.frontRightDrive.setPower(speed);
         robot.rearRightDrive.setPower(speed);
     }
-
 }
