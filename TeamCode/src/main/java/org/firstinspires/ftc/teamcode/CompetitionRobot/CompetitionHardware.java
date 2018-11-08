@@ -17,7 +17,7 @@ public class CompetitionHardware
     public DcMotor liftMotor = null;
 
     //INSTANTIATE SENSORS
-    //public ModernRoboticsI2cGyro gyro;
+    //public BNO055IMU imu = null;
 
     // Local OpMode members
     HardwareMap hardwareMap;
@@ -33,8 +33,15 @@ public class CompetitionHardware
         liftMotor = hardwareMap.get(DcMotor.class, "liftMotor");
 
         //DEFINE SENSORS
-        ///gyro = hardwareMap.get(ModernRoboticsI2cGyro.class, "gyroSensor");
-        
+        //imu = hardwareMap.get(BNO055IMU.class, "imu");
+
+        //IMU PARAMETERS
+        BNO055IMU.Parameters parameters = new BNO055IMU.Parameters();
+        parameters.mode                = BNO055IMU.SensorMode.IMU;
+        parameters.angleUnit           = BNO055IMU.AngleUnit.DEGREES;
+        parameters.accelUnit           = BNO055IMU.AccelUnit.METERS_PERSEC_PERSEC;
+        parameters.loggingEnabled      = false;
+
         //SET MOTOR DIRECTION
         frontLeftDrive.setDirection(DcMotor.Direction.REVERSE);
         rearLeftDrive.setDirection(DcMotor.Direction.REVERSE);
@@ -63,6 +70,6 @@ public class CompetitionHardware
         liftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         //CALIBRATE SENSORS
-        //gyro.calibrate();
+        //imu.initialize(parameters);
     }
 }

@@ -54,28 +54,82 @@ public class CompetitionAuto extends LinearOpMode{
         //AUTONOMOUS START
         //
 
-        moveLiftMotor(200, .5);
+        int cnt = 0;
+
+        moveLiftMotor(10690, 1);
         while(robot.liftMotor.isBusy() && !isStopRequested()){
             telemetry.addData("Status", "liftMotor Raising");
             telemetry.update();
         }
         robot.liftMotor.setPower(0);
 
-        moveDriveEncoder(1000, 1000, .5);
+        moveDriveEncoder(500, 500, .5);
         while(driveMotorsBusy() && !isStopRequested()){
             telemetry.addData("Status", "Driving Forward");
             telemetry.update();
         }
         setDriveMotors(0);
 
-        moveLiftMotor(-200, .5);
+        moveLiftMotor(-10690, 1);
         while(robot.liftMotor.isBusy() && !isStopRequested()){
             telemetry.addData("Status", "liftMotor Lowering");
             telemetry.update();
         }
         robot.liftMotor.setPower(0);
 
-        //driveToGold();
+
+        if(detector.isFound() == false)
+        {
+            moveDriveEncoder(100, -100, .7);
+            setDriveMotors(0);
+            if (detector.isFound() == false)
+            {
+                moveDriveEncoder(-200, 200, .7);
+                setDriveMotors(0);
+                if (detector.isFound() == false)
+                {
+                    stop();
+                }
+            }
+        }
+
+        robot.frontRightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        while(robot.frontRightDrive.getCurrentPosition() < 2500)
+        {
+            telemetry.addData("EncoderCnt", robot.frontRightDrive.getCurrentPosition());
+            telemetry.update();
+            driveToGold();
+        }
+
+//        while (detector.getAligned() == false && cnt > 3) {
+//            telemetry.addData("X Pos:", detector.getXPosition());
+//            telemetry.addData("Is Aligned?", detector.getAligned());
+//            telemetry.update();
+//
+//            robot.frontLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//            robot.rearLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//            robot.frontRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//            robot.rearRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//
+//            if (detector.getXPosition() < 320)
+//            {
+//                robot.frontLeftDrive.setPower(-0.3);
+//                robot.rearLeftDrive.setPower(-0.3);
+//                robot.frontRightDrive.setPower(0.3);
+//                robot.rearRightDrive.setPower(0.3);
+//            }
+//            else if (detector.getXPosition() > 320)
+//            {
+//                robot.frontLeftDrive.setPower(0.3);
+//                robot.rearLeftDrive.setPower(0.3);
+//                robot.frontRightDrive.setPower(-0.3);
+//                robot.rearRightDrive.setPower(-0.3);
+//            }
+//            else if (detector.getAligned() == true)
+//            {
+//                cnt++;
+//            }
+//        }
     }
 
     private void driveToGold(){
@@ -120,10 +174,20 @@ public class CompetitionAuto extends LinearOpMode{
             rightPower = DRIVE_SPEED - turnSpeed;
         }
 
+        robot.frontLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        robot.rearLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        robot.frontRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        robot.rearRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
         robot.frontLeftDrive.setPower(leftPower);
         robot.rearLeftDrive.setPower(leftPower);
         robot.frontRightDrive.setPower(rightPower);
         robot.rearRightDrive.setPower(rightPower);
+
+//        telemetry.addData("leftPow", leftPower);
+//        telemetry.addData("rightPow", rightPower);
+//        telemetry.addData("e", e);
+//        telemetry.update();
     }
 
     private void moveLiftMotor(int ticks, double speed){
