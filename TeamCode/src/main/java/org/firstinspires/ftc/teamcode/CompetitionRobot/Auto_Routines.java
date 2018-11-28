@@ -169,8 +169,8 @@ abstract public class Auto_Routines extends LinearOpMode {
     }
 
     public void deployMarker() {
-        // DO SOMETHING TO DEPLOY TEAM MARKER
-        // WHENEVER WE ADD TEAM MARKER MECHANISM ONTO ROBOT
+        robot.tmServo.setPosition(1);
+        robot.tmServo.setPosition(0);
     }
 
       // OUT OF USE CURRENTLY
