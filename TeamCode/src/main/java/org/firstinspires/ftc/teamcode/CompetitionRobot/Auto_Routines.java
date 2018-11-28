@@ -16,6 +16,7 @@ abstract public class Auto_Routines extends LinearOpMode {
 
     //GLOBAL VARIABLES
     static final double DRIVE_SPEED = 0.3;
+    static final int GOLD_TURN_ANGLE = 200;
     boolean newCommand = true;
 
     public void Auto_Init() {
@@ -141,18 +142,48 @@ abstract public class Auto_Routines extends LinearOpMode {
         else if (detector.getCurrentOrder() == SamplingOrderDetector.GoldLocation.LEFT) {
             telemetry.addData("Gold Order", "LEFT");
             telemetry.update();
-            moveDriveEncoder(-200, 200, DRIVE_SPEED);
+            moveDriveEncoder(-GOLD_TURN_ANGLE, GOLD_TURN_ANGLE, DRIVE_SPEED);
         }
         else if (detector.getCurrentOrder() == SamplingOrderDetector.GoldLocation.RIGHT) {
             telemetry.addData("Gold Order", "RIGHT");
             telemetry.update();
-            moveDriveEncoder(200, -200, DRIVE_SPEED);
+            moveDriveEncoder(GOLD_TURN_ANGLE, -GOLD_TURN_ANGLE, DRIVE_SPEED);
         }
         else {
             telemetry.addData("Gold Order", "UNKNOWN");
             telemetry.update();
         }
+    }
 
+    public void turnToFaceTMDepot() {
+        if (detector.getLastOrder() == SamplingOrderDetector.GoldLocation.CENTER) {
+            telemetry.addData("Gold Order", "CENTER");
+            telemetry.update();
+        }
+        else if (detector.getLastOrder() == SamplingOrderDetector.GoldLocation.LEFT) {
+            telemetry.addData("Gold Order", "LEFT");
+            telemetry.update();
+            moveDriveEncoder(2 * GOLD_TURN_ANGLE, 2 * -GOLD_TURN_ANGLE, DRIVE_SPEED);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Turning To TM Drop Off");
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+        else if (detector.getLastOrder() == SamplingOrderDetector.GoldLocation.RIGHT) {
+            telemetry.addData("Gold Order", "RIGHT");
+            telemetry.update();
+            moveDriveEncoder(2 * -GOLD_TURN_ANGLE, 2 * GOLD_TURN_ANGLE, DRIVE_SPEED);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Turning To TM Drop Off");
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+        else {
+            telemetry.addData("Gold Order", "UNKNOWN");
+            telemetry.update();
+        }
     }
 
     public void craterHitGold() {
@@ -166,6 +197,35 @@ abstract public class Auto_Routines extends LinearOpMode {
             telemetry.update();
         }
         setDriveMotors(0);
+    }
+
+    public void tmRoutine() {
+        // LOCATES THE ORDER WHERE GOLD MINERAL IS AND TURNS ROBOT BASED ON LEFT, CENTER, OR RIGHT
+        turnToFaceGold();
+
+        // DRIVE ROBOT FORWARD 2500 TICKS TO HIT GOLD ELEMENT
+        // MORE THAN LIKELY NEEDS ADJUSTMENT
+        moveDriveEncoder(2500, 2500, .5);
+        while(driveMotorsBusy() && !isStopRequested()){
+            telemetry.addData("Status", "Driving Forward To Gold");
+            telemetry.update();
+        }
+        setDriveMotors(0);
+
+        // TURN TO FACE THE TEAM MARKER DROP OFF
+        turnToFaceTMDepot();
+
+        // DRIVE FORWARD TOWARDS TEAM MARKER DROP OFF
+        // ENCODER COUNTS WILL NEED ADJUSTMENTS TO MOVE CORRECTLY
+        moveDriveEncoder(1000, 1000, .5);
+        while(driveMotorsBusy() && !isStopRequested()){
+            telemetry.addData("Status", "Driving Forward To TM Drop Off");
+            telemetry.update();
+        }
+        setDriveMotors(0);
+
+        //TURNS SERVO TO DROP TEAM MARKER
+        deployMarker();
     }
 
     public void deployMarker() {
