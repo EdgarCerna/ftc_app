@@ -6,6 +6,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.GyroSensor;
+import com.qualcomm.robotcore.hardware.Servo;
 
 public class CompetitionHardware
 {
@@ -16,8 +17,8 @@ public class CompetitionHardware
     public DcMotor rearRightDrive = null;
     public DcMotor liftMotor = null;
 
-    //INSTANTIATE SENSORS
-    //public BNO055IMU imu = null;
+    //INSTANTIATE SERVOS
+    public Servo tmServo = null;
 
     // Local OpMode members
     HardwareMap hardwareMap;
@@ -32,15 +33,8 @@ public class CompetitionHardware
         rearRightDrive = hardwareMap.get(DcMotor.class, "rearRightDrive");
         liftMotor = hardwareMap.get(DcMotor.class, "liftMotor");
 
-        //DEFINE SENSORS
-        //imu = hardwareMap.get(BNO055IMU.class, "imu");
-
-        //IMU PARAMETERS
-        BNO055IMU.Parameters parameters = new BNO055IMU.Parameters();
-        parameters.mode                = BNO055IMU.SensorMode.IMU;
-        parameters.angleUnit           = BNO055IMU.AngleUnit.DEGREES;
-        parameters.accelUnit           = BNO055IMU.AccelUnit.METERS_PERSEC_PERSEC;
-        parameters.loggingEnabled      = false;
+        //DEFINE SERVOS
+        tmServo = hardwareMap.get(Servo.class, "tmServo");
 
         //SET MOTOR DIRECTION
         frontLeftDrive.setDirection(DcMotor.Direction.REVERSE);
@@ -68,8 +62,5 @@ public class CompetitionHardware
         rearLeftDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         rearRightDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         liftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-
-        //CALIBRATE SENSORS
-        //imu.initialize(parameters);
     }
 }
