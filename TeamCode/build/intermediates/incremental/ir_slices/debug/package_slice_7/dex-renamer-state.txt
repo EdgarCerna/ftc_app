@@ -1,0 +1,4 @@
+#Sat Dec 01 12:23:18 CST 2018
+base.0=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/7
+path.0=classes.dex
+renamed.0=classes.dex

@@ -11,51 +11,33 @@ import java.util.List;
 
 abstract public class Auto_Routines extends LinearOpMode {
     CompetitionHardware robot = new CompetitionHardware();
-    public SamplingOrderDetector detector;
-    //public GoldAlignDetector detector;
+    public GoldAlignDetector detector;
 
     //GLOBAL VARIABLES
-    static final double DRIVE_SPEED = 0.3;
-    static final int GOLD_TURN_ANGLE = 200;
-    boolean newCommand = true;
+    static final double DRIVE_SPEED = 0.15;
+    static boolean newCommand = true;
+    static double eOld = 0;
+    static char goldPos = 'U';
 
     public void Auto_Init() {
         robot.init(hardwareMap);
 
-//        telemetry.addData("Status", "DogeCV 2018.0 - Gold Align Example");
-//
-//        detector = new GoldAlignDetector();
-//        detector.init(hardwareMap.appContext, CameraViewDisplay.getInstance());
-//        detector.useDefaults();
-//
-//        // Optional Tuning
-//        detector.alignSize = 100; // How wide (in pixels) is the range in which the gold object will be aligned. (Represented by green bars in the preview)
-//        detector.alignPosOffset = 0; // How far from center frame to offset this alignment zone.
-//        detector.downscale = 0.4; // How much to downscale the input frames
-//
-//        detector.areaScoringMethod = DogeCV.AreaScoringMethod.MAX_AREA; // Can also be PERFECT_AREA
-//        //detector.perfectAreaScorer.perfectArea = 10000; // if using PERFECT_AREA scoring
-//        detector.maxAreaScorer.weight = 0.005;
-//
-//        detector.ratioScorer.weight = 5;
-//        detector.ratioScorer.perfectRatio = 1.0;
-//
-//        detector.enable();
+        telemetry.addData("Status", "DogeCV 2018.0 - Gold Align Example");
 
-        telemetry.addData("Status", "DogeCV 2018.0 - Sampling Order Example");
-
-        detector = new SamplingOrderDetector();
+        detector = new GoldAlignDetector();
         detector.init(hardwareMap.appContext, CameraViewDisplay.getInstance());
         detector.useDefaults();
 
+        // Optional Tuning
+        detector.alignSize = 100; // How wide (in pixels) is the range in which the gold object will be aligned. (Represented by green bars in the preview)
+        detector.alignPosOffset = 0; // How far from center frame to offset this alignment zone.
         detector.downscale = 0.4; // How much to downscale the input frames
 
-        // Optional Tuning
         detector.areaScoringMethod = DogeCV.AreaScoringMethod.MAX_AREA; // Can also be PERFECT_AREA
         //detector.perfectAreaScorer.perfectArea = 10000; // if using PERFECT_AREA scoring
-        detector.maxAreaScorer.weight = 0.001;
+        detector.maxAreaScorer.weight = 0.005;
 
-        detector.ratioScorer.weight = 15;
+        detector.ratioScorer.weight = 5;
         detector.ratioScorer.perfectRatio = 1.0;
 
         detector.enable();
@@ -133,162 +115,151 @@ abstract public class Auto_Routines extends LinearOpMode {
         robot.rearRightDrive.setPower(speed);
     }
 
-    //NEED TO ADJUST THE ENCODER TICKS TO PROPERLY TURN
-    public void turnToFaceGold() {
-        if (detector.getCurrentOrder() == SamplingOrderDetector.GoldLocation.CENTER) {
-            telemetry.addData("Gold Order", "CENTER");
-            telemetry.update();
-        }
-        else if (detector.getCurrentOrder() == SamplingOrderDetector.GoldLocation.LEFT) {
-            telemetry.addData("Gold Order", "LEFT");
-            telemetry.update();
-            moveDriveEncoder(-GOLD_TURN_ANGLE, GOLD_TURN_ANGLE, DRIVE_SPEED);
-        }
-        else if (detector.getCurrentOrder() == SamplingOrderDetector.GoldLocation.RIGHT) {
-            telemetry.addData("Gold Order", "RIGHT");
-            telemetry.update();
-            moveDriveEncoder(GOLD_TURN_ANGLE, -GOLD_TURN_ANGLE, DRIVE_SPEED);
-        }
-        else {
-            telemetry.addData("Gold Order", "UNKNOWN");
-            telemetry.update();
-        }
-    }
-
-    public void turnToFaceTMDepot() {
-        if (detector.getLastOrder() == SamplingOrderDetector.GoldLocation.CENTER) {
-            telemetry.addData("Gold Order", "CENTER");
-            telemetry.update();
-        }
-        else if (detector.getLastOrder() == SamplingOrderDetector.GoldLocation.LEFT) {
-            telemetry.addData("Gold Order", "LEFT");
-            telemetry.update();
-            moveDriveEncoder(2 * GOLD_TURN_ANGLE, 2 * -GOLD_TURN_ANGLE, DRIVE_SPEED);
-            while(driveMotorsBusy() && !isStopRequested()){
-                telemetry.addData("Status", "Turning To TM Drop Off");
-                telemetry.update();
-            }
-            setDriveMotors(0);
-        }
-        else if (detector.getLastOrder() == SamplingOrderDetector.GoldLocation.RIGHT) {
-            telemetry.addData("Gold Order", "RIGHT");
-            telemetry.update();
-            moveDriveEncoder(2 * -GOLD_TURN_ANGLE, 2 * GOLD_TURN_ANGLE, DRIVE_SPEED);
-            while(driveMotorsBusy() && !isStopRequested()){
-                telemetry.addData("Status", "Turning To TM Drop Off");
-                telemetry.update();
-            }
-            setDriveMotors(0);
-        }
-        else {
-            telemetry.addData("Gold Order", "UNKNOWN");
-            telemetry.update();
-        }
-    }
-
-    public void craterHitGold() {
-        // LOCATES THE ORDER WHERE GOLD MINERAL IS AND TURNS ROBOT BASED ON LEFT, CENTER, OR RIGHT
-        turnToFaceGold();
-
-        // DRIVE ROBOT FORWARD 2500 TICKS TO HIT GOLD ELEMENT
-        moveDriveEncoder(2500, 2500, .5);
-        while(driveMotorsBusy() && !isStopRequested()){
-            telemetry.addData("Status", "Driving Forward To Gold");
-            telemetry.update();
-        }
-        setDriveMotors(0);
-    }
-
     public void tmRoutine() {
-        // LOCATES THE ORDER WHERE GOLD MINERAL IS AND TURNS ROBOT BASED ON LEFT, CENTER, OR RIGHT
-        turnToFaceGold();
 
-        // DRIVE ROBOT FORWARD 2500 TICKS TO HIT GOLD ELEMENT
-        // MORE THAN LIKELY NEEDS ADJUSTMENT
-        moveDriveEncoder(2500, 2500, .5);
-        while(driveMotorsBusy() && !isStopRequested()){
-            telemetry.addData("Status", "Driving Forward To Gold");
-            telemetry.update();
+        // PID DRIVE TO GOLD
+        stopResetDriveEncoders();
+        while (robot.frontLeftDrive.getCurrentPosition() < 2500 && robot.frontRightDrive.getCurrentPosition() < 2500) {
+            pidDriveTowardGold();
         }
-        setDriveMotors(0);
 
-        // TURN TO FACE THE TEAM MARKER DROP OFF
-        turnToFaceTMDepot();
-
-        // DRIVE FORWARD TOWARDS TEAM MARKER DROP OFF
-        // ENCODER COUNTS WILL NEED ADJUSTMENTS TO MOVE CORRECTLY
-        moveDriveEncoder(1000, 1000, .5);
+        // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
+        stopResetDriveEncoders();
+        moveDriveEncoder(2000, 2000, .3);
         while(driveMotorsBusy() && !isStopRequested()){
             telemetry.addData("Status", "Driving Forward To TM Drop Off");
+            telemetry.addData("goldPos", goldPos);
             telemetry.update();
         }
         setDriveMotors(0);
+
+        // TURN TO DEPOT BASED ON goldPos
+        if (goldPos == 'R') {
+            // TURN LEFT TO FACE DEPOT
+            moveDriveEncoder(-1000, 1000, .2);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Turning To TM Drop Off");
+                telemetry.update();
+            }
+
+            // DRIVE FORWARD INTO DEPOT
+            stopResetDriveEncoders();
+            moveDriveEncoder(1500, 1500, .2);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+        else if (goldPos == 'L') {
+            // TURN RIGHT TO FACE DEPOT
+            moveDriveEncoder(1000, -1000, .2);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Turning To TM Drop Off");
+                telemetry.update();
+            }
+
+            // DRIVE FORWARD INTO DEPOT
+            stopResetDriveEncoders();
+            moveDriveEncoder(1200, 1200, .2);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
 
         //TURNS SERVO TO DROP TEAM MARKER
         deployMarker();
     }
 
+    // UN-TESTED
+    // MAY NEED TO DRIVE FORWARD SLIGHTLY MORE TO ACTUALLY HIT GOD MARKER AND THEN TO PARK ON THE CRATER
+    public void craterRoutine() {
+
+        // PID DRIVE TO GOLD
+        stopResetDriveEncoders();
+        while (robot.frontLeftDrive.getCurrentPosition() < 2500 && robot.frontRightDrive.getCurrentPosition() < 2500) {
+            pidDriveTowardGold();
+        }
+
+    }
+
     public void deployMarker() {
         robot.tmServo.setPosition(1);
+        sleep(500);
         robot.tmServo.setPosition(0);
     }
 
-      // OUT OF USE CURRENTLY
-//    public void pidDriveTowardGold(){
-//        //VARIABLES
-//        final int target = 320;
-//        //int centerCnt = 0;
-//        double x = detector.getXPosition();
-//        double e, eOld, de, ie = 0;
-//        double kp = 0.1, kd = 0, ki = 0;
-//        double leftPower, rightPower, turnSpeed;
-//        int cnt = 0;
-//
-//        e = x - target;
-//        eOld = e;
-//        if (newCommand == true)
-//        {
-//            de = 0;
-//            newCommand = false;
-//        }
-//        else
-//        {
-//            de = e - eOld;  //difference
-//        }
-//        ie += e;            //integration
-//
-//        turnSpeed = kp * e + kd * de + ki * ie;
-//        if (turnSpeed > 0.3)
-//        {
-//            turnSpeed = 0.3;
-//        }
-//        else if (turnSpeed < -0.3)
-//        {
-//            turnSpeed = -0.3;
-//        }
-//        if (turnSpeed > 0) {
-//            leftPower = DRIVE_SPEED + turnSpeed;
-//            rightPower = DRIVE_SPEED;
-//        }
-//        else
-//        {
-//            leftPower = DRIVE_SPEED;
-//            rightPower = DRIVE_SPEED - turnSpeed;
-//        }
-//
-//        robot.frontLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-//        robot.rearLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-//        robot.frontRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-//        robot.rearRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-//
-//        robot.frontLeftDrive.setPower(leftPower);
-//        robot.rearLeftDrive.setPower(leftPower);
-//        robot.frontRightDrive.setPower(rightPower);
-//        robot.rearRightDrive.setPower(rightPower);
-//
+    public void pidDriveTowardGold(){
+        //VARIABLES
+        final int target = 320;
+        double x = detector.getXPosition();
+        double e, de, ie = 0;
+        double kp = 0.002, kd = 0, ki = 0;
+        double leftPower, rightPower, turnSpeed;
+        int cnt = 0;
+
+        e = x - target;
+        if (newCommand == true) {
+            de = 0;
+            newCommand = false;
+
+            if (e > 80) {
+                goldPos = 'R';
+            }
+            if (e < -80) {
+                goldPos = 'L';
+            }
+            if (e >= -80 && e <= 80) {
+                goldPos = 'C';
+            }
+
+            telemetry.addData("goldPos", goldPos);
+            telemetry.update();
+        }
+        else
+        {
+            de = e - eOld;  //difference
+        }
+        ie += e;            //integration
+
+        eOld = e;
+        turnSpeed = kp * e + kd * de + ki * ie;
+
+        if (turnSpeed > 0.3)
+        {
+            turnSpeed = 0.3;
+        }
+        else if (turnSpeed < -0.3)
+        {
+            turnSpeed = -0.3;
+        }
+        if (turnSpeed > 0) {
+            leftPower = DRIVE_SPEED + turnSpeed;
+            rightPower = DRIVE_SPEED - turnSpeed / 2;
+        }
+        else
+        {
+            leftPower = DRIVE_SPEED + turnSpeed / 2;
+            rightPower = DRIVE_SPEED - turnSpeed;
+        }
+
+        robot.frontLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        robot.rearLeftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        robot.frontRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        robot.rearRightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
+        robot.frontLeftDrive.setPower(leftPower);
+        robot.rearLeftDrive.setPower(leftPower);
+        robot.frontRightDrive.setPower(rightPower);
+        robot.rearRightDrive.setPower(rightPower);
+
 //        telemetry.addData("leftPow", leftPower);
 //        telemetry.addData("rightPow", rightPower);
 //        telemetry.addData("e", e);
+//        telemetry.addData("de", de);
+//        telemetry.addData("goldPos", goldPos);
 //        telemetry.update();
-//    }
+    }
 }

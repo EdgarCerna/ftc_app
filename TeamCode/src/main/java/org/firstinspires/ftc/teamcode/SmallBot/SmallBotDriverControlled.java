@@ -1,12 +1,13 @@
 package org.firstinspires.ftc.teamcode.SmallBot;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.SpeedyGonzalez.EdgarHardware;
 
 @TeleOp(name="SmallBotDriverControlled", group="TeleOp")
-
+@Disabled
 public class SmallBotDriverControlled extends OpMode{
 
     //DECLARE OpMode MEMBERS

@@ -14,14 +14,14 @@ public class tmAutonomous extends Auto_Routines {
         raiseLiftMotor();
 
         // DRIVE ROBOT FORWARD 500 TICKS TO ALLOW LIFT TO LOWER
-        moveDriveEncoder(500, 500, .5);
+        moveDriveEncoder(500, 500, .2);
         while(driveMotorsBusy() && !isStopRequested()){
             telemetry.addData("Status", "Driving Forward");
             telemetry.update();
         }
         setDriveMotors(0);
 
-        // TURNS ROBOT TO FACE GOLD THEN DRIVES FORWARD 2500 ENCODER TICKS
+        // TESTING IF NEW ROUTINE WORKS USING GOLD SAMPLE
         tmRoutine();
 
         // LOWER LIFT MOTOR TO RETURN TO NORMAL SIZE

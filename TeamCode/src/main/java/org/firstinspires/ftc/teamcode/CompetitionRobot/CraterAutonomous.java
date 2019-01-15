@@ -21,8 +21,8 @@ public class CraterAutonomous extends Auto_Routines {
         }
         setDriveMotors(0);
 
-        // TURNS ROBOT TO FACE GOLD THEN DRIVES FORWARD 2500 ENCODER TICKS
-        craterHitGold();
+        // RUN CRATER ROUTINE
+        craterRoutine();
 
         // LOWER LIFT MOTOR TO RETURN TO NORMAL SIZE
         lowerLiftMotor();

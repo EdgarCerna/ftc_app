@@ -1,10 +1,11 @@
 package org.firstinspires.ftc.teamcode.SpeedyGonzalez;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @TeleOp(name="EdgarDriverControlled", group="TeleOp")
-
+@Disabled
 public class EdgarDriverControlled extends OpMode{
 
     //DECLARE OpMode MEMBERS

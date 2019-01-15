@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
 @Autonomous(name="Competition Autonomous", group="Autonomous")
-//@Disabled
+@Disabled
 public class CompetitionAuto extends LinearOpMode{
 
     private GoldAlignDetector detector;

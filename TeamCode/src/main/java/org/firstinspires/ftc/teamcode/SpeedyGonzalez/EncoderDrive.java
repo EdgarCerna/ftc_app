@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.SpeedyGonzalez;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -29,7 +30,7 @@ import org.firstinspires.ftc.teamcode.SpeedyGonzalez.EdgarHardware;
  */
 
 @Autonomous(name="EncoderDrive", group="Autonomous")
-//@Disabled
+@Disabled
 public class EncoderDrive extends LinearOpMode {
 
     /* Declare OpMode members. */

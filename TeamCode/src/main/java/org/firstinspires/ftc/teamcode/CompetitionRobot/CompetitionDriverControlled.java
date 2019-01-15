@@ -30,18 +30,34 @@ public class CompetitionDriverControlled extends OpMode{
         double rightPowerT = leftTrigger + rightTrigger - rightStickX;
         double leftPowerT = leftTrigger + rightTrigger + rightStickX;
 
-        robot.frontLeftDrive.setPower(leftPowerT);
-        robot.rearLeftDrive.setPower(leftPowerT);
-        robot.frontRightDrive.setPower(rightPowerT);
-        robot.rearRightDrive.setPower(rightPowerT);
-
+        // LIFT CODE
         if (gamepad1.right_bumper)
             robot.liftMotor.setPower(1);
         else if (gamepad1.left_bumper)
             robot.liftMotor.setPower(-1);
         else
             robot.liftMotor.setPower(0);
-        
+
+        // STRAFE CODE
+        if (gamepad1.dpad_right) {
+            robot.frontLeftDrive.setPower(-1);
+            robot.frontRightDrive.setPower(1);
+            robot.rearLeftDrive.setPower(1);
+            robot.rearRightDrive.setPower(-1);
+        }
+        else if (gamepad1.dpad_left) {
+            robot.frontLeftDrive.setPower(1);
+            robot.frontRightDrive.setPower(-1);
+            robot.rearLeftDrive.setPower(-1);
+            robot.rearRightDrive.setPower(1);
+        }
+        else {
+            robot.frontLeftDrive.setPower(leftPowerT);
+            robot.rearLeftDrive.setPower(leftPowerT);
+            robot.frontRightDrive.setPower(rightPowerT);
+            robot.rearRightDrive.setPower(rightPowerT);
+        }
+
         //Send Telemetry Data
         telemetry.addData("LeftPower",  "%.2f", leftTrigger);
         telemetry.addData("RightPower", "%.2f", rightTrigger);
