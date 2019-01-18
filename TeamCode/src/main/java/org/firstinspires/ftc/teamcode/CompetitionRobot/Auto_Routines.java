@@ -17,7 +17,7 @@ abstract public class Auto_Routines extends LinearOpMode {
     static final double DRIVE_SPEED = 0.15;
     static boolean newCommand = true;
     static double eOld = 0;
-    static char goldPos = 'U';
+    char goldPos = 'U';
 
     public void Auto_Init() {
         robot.init(hardwareMap);
@@ -125,7 +125,7 @@ abstract public class Auto_Routines extends LinearOpMode {
 
         // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
         stopResetDriveEncoders();
-        moveDriveEncoder(2000, 2000, .3);
+        moveDriveEncoder(2500, 2500, .4);
         while(driveMotorsBusy() && !isStopRequested()){
             telemetry.addData("Status", "Driving Forward To TM Drop Off");
             telemetry.addData("goldPos", goldPos);
@@ -136,7 +136,7 @@ abstract public class Auto_Routines extends LinearOpMode {
         // TURN TO DEPOT BASED ON goldPos
         if (goldPos == 'R') {
             // TURN LEFT TO FACE DEPOT
-            moveDriveEncoder(-1000, 1000, .2);
+            moveDriveEncoder(-2000, 2000, .3);
             while(driveMotorsBusy() && !isStopRequested()){
                 telemetry.addData("Status", "Turning To TM Drop Off");
                 telemetry.update();
@@ -144,7 +144,7 @@ abstract public class Auto_Routines extends LinearOpMode {
 
             // DRIVE FORWARD INTO DEPOT
             stopResetDriveEncoders();
-            moveDriveEncoder(1500, 1500, .2);
+            moveDriveEncoder(2100, 2100, .3);
             while(driveMotorsBusy() && !isStopRequested()){
                 telemetry.addData("Status", "Driving Forward To TM Drop Off");
                 telemetry.update();
@@ -153,7 +153,7 @@ abstract public class Auto_Routines extends LinearOpMode {
         }
         else if (goldPos == 'L') {
             // TURN RIGHT TO FACE DEPOT
-            moveDriveEncoder(1000, -1000, .2);
+            moveDriveEncoder(1800, -1800, .3);
             while(driveMotorsBusy() && !isStopRequested()){
                 telemetry.addData("Status", "Turning To TM Drop Off");
                 telemetry.update();
@@ -161,7 +161,7 @@ abstract public class Auto_Routines extends LinearOpMode {
 
             // DRIVE FORWARD INTO DEPOT
             stopResetDriveEncoders();
-            moveDriveEncoder(1200, 1200, .2);
+            moveDriveEncoder(1600, 1600, .2);
             while(driveMotorsBusy() && !isStopRequested()){
                 telemetry.addData("Status", "Driving Forward To TM Drop Off");
                 telemetry.update();

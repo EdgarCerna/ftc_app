@@ -5,43 +5,43 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_squarebot.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/squarebot.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/squarebot.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_simple_vertex_shader.glsl.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/raw/simple_vertex_shader.glsl"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/raw/simple_vertex_shader.glsl"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_legacy.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/legacy.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/legacy.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable-hdpi-v4_button_shape.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/drawable-hdpi-v4/button_shape.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/drawable-hdpi-v4/button_shape.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_ftc_about_activity_rc.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/ftc_about_activity_rc.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/ftc_about_activity_rc.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_analog_input_device.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/analog_input_device.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/analog_input_device.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_red_line.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/red_line.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/red_line.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable_button_shape.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/drawable/button_shape.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/drawable/button_shape.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_program_and_manage.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_program_and_manage.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_program_and_manage.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable_feedback_shape_orange.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/drawable/feedback_shape_orange.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/drawable/feedback_shape_orange.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable-xhdpi-v4_icon_menu.png.flat",
@@ -49,35 +49,35 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_motor_controller_banner.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/motor_controller_banner.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/motor_controller_banner.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_device_interface_module.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/device_interface_module.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/device_interface_module.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_generic_settings.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_generic_settings.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_generic_settings.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_config_wifi_direct.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_config_wifi_direct.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_config_wifi_direct.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_analog_output_device.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/analog_output_device.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/analog_output_device.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable_icon_robotcontroller.png.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Inspection-release.aar/723b7d88f0d1612a7e74e1a93aceb8b4/res/drawable/icon_robotcontroller.png"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Inspection-release.aar/a9866183573348583f1f45510b5ff346/res/drawable/icon_robotcontroller.png"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_lynx_module_configure_address_spin_item.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/lynx_module_configure_address_spin_item.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/lynx_module_configure_address_spin_item.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_template_info.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/template_info.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/template_info.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_launcher.png.flat",
@@ -85,39 +85,39 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_item_list_parent.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/item_list_parent.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/item_list_parent.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_pwms.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/pwms.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/pwms.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_configure_from_template.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_configure_from_template.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_configure_from_template.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_servo.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/servo.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/servo.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/menu_main_menu.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Inspection-release.aar/723b7d88f0d1612a7e74e1a93aceb8b4/res/menu/main_menu.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Inspection-release.aar/a9866183573348583f1f45510b5ff346/res/menu/main_menu.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_cube_mesh_fragment_shader.glsl.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/raw/cube_mesh_fragment_shader.glsl"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/raw/cube_mesh_fragment_shader.glsl"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_motor.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/motor.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/motor.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_matrix_devices.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/matrix_devices.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/matrix_devices.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_advanced_rc_settings.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/advanced_rc_settings.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/advanced_rc_settings.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_app_settings.xml.flat",
@@ -125,7 +125,7 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_i2c_device.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/i2c_device.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/i2c_device.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/menu_ftc_robot_controller.xml.flat",
@@ -133,7 +133,7 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_k9legacybot.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/k9legacybot.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/k9legacybot.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_sonicsong.mp3.flat",
@@ -145,23 +145,23 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_k9usbbot.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/k9usbbot.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/k9usbbot.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/menu_menu_server.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/c928788f155b36dce64e17c9ab887fb1/res/menu/menu_server.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/384e82e9e3292dc618674a086ebff38d/res/menu/menu_server.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_port_attached_row.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/port_attached_row.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/port_attached_row.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_errormessage.wav.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/raw/errormessage.wav"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/raw/errormessage.wav"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_fragment_wifi_mute.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/layout/fragment_wifi_mute.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/layout/fragment_wifi_mute.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_launcher.png.flat",
@@ -169,107 +169,107 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_rev_scoot.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/rev_scoot.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/rev_scoot.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_nxtstartupsound.wav.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/raw/nxtstartupsound.wav"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/raw/nxtstartupsound.wav"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_loading_indicator_overlay.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/layout/loading_indicator_overlay.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/layout/loading_indicator_overlay.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_pwm_device.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/pwm_device.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/pwm_device.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_chimedisconnect.wav.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/raw/chimedisconnect.wav"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/raw/chimedisconnect.wav"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_digital_devices.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/digital_devices.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/digital_devices.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_simple_device.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/simple_device.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/simple_device.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_programming_mode.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/c928788f155b36dce64e17c9ab887fb1/res/layout/activity_programming_mode.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/384e82e9e3292dc618674a086ebff38d/res/layout/activity_programming_mode.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_pushbotsens.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/pushbotsens.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/pushbotsens.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_color_fragment_shader.glsl.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/raw/color_fragment_shader.glsl"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/raw/color_fragment_shader.glsl"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_chimeconnect.wav.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/raw/chimeconnect.wav"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/raw/chimeconnect.wav"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_ftc_wifi_channel_selector.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_ftc_wifi_channel_selector.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_ftc_wifi_channel_selector.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_file_info.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/file_info.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/file_info.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_texture_fragment_shader.glsl.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/raw/texture_fragment_shader.glsl"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/raw/texture_fragment_shader.glsl"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_warningmessage.wav.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/raw/warningmessage.wav"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/raw/warningmessage.wav"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_lynx_usb_device.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/lynx_usb_device.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/lynx_usb_device.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_header.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/header.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/header.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_banner_parent.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/banner_parent.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/banner_parent.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_motor_list.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/motor_list.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/motor_list.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_ftc_configuration.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_ftc_configuration.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_ftc_configuration.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_inspection.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Inspection-release.aar/723b7d88f0d1612a7e74e1a93aceb8b4/res/layout/activity_inspection.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Inspection-release.aar/a9866183573348583f1f45510b5ff346/res/layout/activity_inspection.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_maxmodules.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/maxmodules.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/maxmodules.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_blocks.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/c928788f155b36dce64e17c9ab887fb1/res/layout/activity_blocks.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/384e82e9e3292dc618674a086ebff38d/res/layout/activity_blocks.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_servo_list.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/servo_list.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/servo_list.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_color_list_preference_line_item.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/layout/color_list_preference_line_item.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/layout/color_list_preference_line_item.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_webcam_device.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/webcam_device.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/webcam_device.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_launcher.png.flat",
@@ -277,15 +277,15 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_ftc_wifi_remembered_groups.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_ftc_wifi_remembered_groups.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_ftc_wifi_remembered_groups.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable_black_border.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/c928788f155b36dce64e17c9ab887fb1/res/drawable/black_border.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/384e82e9e3292dc618674a086ebff38d/res/drawable/black_border.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_ftc_lynx_address_update.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_ftc_lynx_address_update.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_ftc_lynx_address_update.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_launcher.png.flat",
@@ -297,79 +297,79 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_lynx_module.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/lynx_module.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/lynx_module.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_texture_vertex_shader.glsl.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/raw/texture_vertex_shader.glsl"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/raw/texture_vertex_shader.glsl"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_view_logs.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_view_logs.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_view_logs.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_i2cs.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/i2cs.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/i2cs.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_button_list.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/button_list.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/button_list.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_load.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_load.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_load.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_cube_mesh_vertex_shader.glsl.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/raw/cube_mesh_vertex_shader.glsl"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/raw/cube_mesh_vertex_shader.glsl"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_digital_device.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/digital_device.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/digital_device.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/drawable_icon_menu.png.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Inspection-release.aar/723b7d88f0d1612a7e74e1a93aceb8b4/res/drawable/icon_menu.png"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/Inspection-release.aar/a9866183573348583f1f45510b5ff346/res/drawable/icon_menu.png"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_analog_inputs.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/analog_inputs.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/analog_inputs.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_lynx_module_configure_address.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/lynx_module_configure_address.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/lynx_module_configure_address.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_ftc_about_activity.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/ftc_about_activity.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/ftc_about_activity.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_matrices.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/matrices.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/matrices.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_swap_usb_devices.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_swap_usb_devices.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_swap_usb_devices.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_digital_device_lynx.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/digital_device_lynx.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/digital_device_lynx.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_gray_line.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/gray_line.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/gray_line.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_info_button.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/info_button.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/info_button.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_servo_controller_banner.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/servo_controller_banner.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/servo_controller_banner.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_feedback.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/layout/feedback.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/layout/feedback.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_teamwebcamcalibrations.xml.flat",
@@ -377,22 +377,22 @@
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/raw_format_convert.bc.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/raw/format_convert.bc"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/raw/format_convert.bc"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_analog_outputs.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/analog_outputs.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/analog_outputs.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_pushbot.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/xml/pushbot.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/xml/pushbot.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/layout_activity_ftc_lynx_fw_update.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/f81623aca89d05cea78544f8f558a5db/res/layout/activity_ftc_lynx_fw_update.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/FtcCommon-release.aar/c12a697f90e4db1af35710225562e98f/res/layout/activity_ftc_lynx_fw_update.xml"
     },
     {
         "merged": "/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/res/merged/debug/xml_builtinwebcamcalibrations.xml.flat",
-        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/b0ba989a98b08ce693fdba0bc637968b/res/xml/builtinwebcamcalibrations.xml"
+        "source": "/home/edgar/.gradle/caches/transforms-1/files-1.1/RobotCore-release.aar/62ec5f745cffd9535218c61516411b29/res/xml/builtinwebcamcalibrations.xml"
     }
 ]

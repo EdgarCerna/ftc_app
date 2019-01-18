@@ -5,38 +5,50 @@
     build-mode="FULL"
     density="xhdpi"
     format="10"
-    plugin-version="3.2.1"
-    timestamp="1545248328318"
+    plugin-version="3.3.0"
+    timestamp="1547767304609"
     token="1946636248739835758"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1320" />
+        duration="227" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="155" />
+        duration="750" />
     <task
         name="verifier"
-        duration="46" />
+        duration="89" />
 
     <artifact
-        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
     <artifact
-        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/instant-run-apk/debug/TeamCode-debug.apk"
-        type="SPLIT_MAIN" />
-    <artifact
         location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
         location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
         location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_7.apk"
@@ -45,39 +57,39 @@
         location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
-        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
+        location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/instant-run-apk/debug/TeamCode-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1545248328318"
+        timestamp="1547767304609"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/instant-run-apk/debug/TeamCode-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
             location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_7.apk"
@@ -86,20 +98,8 @@
             location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
+            location="/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/instant-run-apk/debug/TeamCode-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
