@@ -1,10 +1,10 @@
 #Internal package file, do not edit.
-#Thu Jan 17 17:22:26 CST 2019
+#Thu Jan 24 13:34:49 CST 2019
 20.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 143.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 237.path=blocks/color.js
 53.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/19
-66.set=DEX
+66.set=ASSET
 317.set=ASSET
 356.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 86.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -55,7 +55,7 @@
 156.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 327.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 15.baseType=DIRECTORY
-66.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/18
+66.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 189.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 43.baseType=DIRECTORY
 74.set=ASSET
@@ -77,7 +77,7 @@
 302.set=ASSET
 179.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 291.path=java/js/keybinding-vim.js
-225.set=ASSET
+225.set=DEX
 121.path=blocks/quaternion.js
 103.set=ASSET
 154.path=java/templates/ConceptVuforiaNavigationWebcam
@@ -106,7 +106,7 @@
 269.baseType=DIRECTORY
 134.set=ASSET
 247.baseType=DIRECTORY
-117.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+117.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/17
 275.baseType=DIRECTORY
 179.set=ASSET
 27.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -124,7 +124,7 @@
 312.baseType=DIRECTORY
 244.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 340.baseType=DIRECTORY
-107.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+107.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/14
 364.set=ASSET
 17.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 209.baseType=DIRECTORY
@@ -133,7 +133,7 @@
 243.baseType=DIRECTORY
 210.set=ASSET
 165.set=ASSET
-115.path=classes.dex
+115.path=images/ftcDcMotorController.png
 371.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 201.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 25.path=java/js/snippets/markdown.js
@@ -228,7 +228,7 @@
 229.set=ASSET
 32.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 249.path=java/js/polyfills.js
-107.set=ASSET
+107.set=DEX
 335.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 180.set=ASSET
 9.baseType=DIRECTORY
@@ -277,7 +277,7 @@
 45.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 168.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 237.set=ASSET
-115.set=DEX
+115.set=ASSET
 78.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 110.path=manage.html
 143.path=java/templates/SensorMRColor
@@ -327,7 +327,7 @@
 123.set=ASSET
 156.path=java/js/antlr4/atn/ATNState.js
 327.path=java/js/antlr4/atn/LexerAction.js
-66.path=classes.dex
+66.path=blocks/lynx_i2c_color_range_sensor.js
 189.path=java/js/antlr4/atn/index.js
 275.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 376.set=ASSET
@@ -384,7 +384,7 @@
 230.set=ASSET
 18.baseType=DIRECTORY
 46.baseType=DIRECTORY
-117.path=java/js/antlr4/atn/Transition.js
+117.path=classes.dex
 373.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 24.baseType=DIRECTORY
 52.baseType=DIRECTORY
@@ -403,7 +403,7 @@
 330.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 60.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 192.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
-107.path=java/android.jar
+107.path=classes.dex
 363.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 17.path=java/js/antlr4/polyfills/codepointat.js
 59.set=ASSET
@@ -437,7 +437,7 @@
 309.baseType=DIRECTORY
 159.baseType=DIRECTORY
 187.baseType=DIRECTORY
-67.set=ASSET
+67.set=DEX
 318.set=ASSET
 315.baseType=DIRECTORY
 343.baseType=DIRECTORY
@@ -595,7 +595,7 @@
 16.path=images/ftcLinearOpMode.png
 148.path=blocks/sound_util.js
 319.path=java/templates/PushbotTeleopPOV_Linear
-225.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+225.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/11
 373.set=ASSET
 17.set=ASSET
 26.baseType=DIRECTORY
@@ -774,7 +774,7 @@
 199.path=css/FtcBlocksProjects.less
 352.baseType=DIRECTORY
 380.baseType=DIRECTORY
-106.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/14
+106.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 354.set=ASSET
 139.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 49.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -858,7 +858,7 @@
 293.set=ASSET
 288.baseType=DIRECTORY
 191.path=js/util.js
-225.path=RobotConfigDescriptionGenerate.xslt
+225.path=classes.dex
 68.set=ASSET
 319.set=ASSET
 311.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -957,7 +957,7 @@
 157.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 328.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 31.baseType=DIRECTORY
-67.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+67.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/18
 84.set=ASSET
 335.set=ASSET
 132.path=blocks/vuforia_trackables.js
@@ -1038,7 +1038,7 @@
 231.baseType=DIRECTORY
 297.set=ASSET
 220.set=ASSET
-116.path=images/ftcDcMotorController.png
+116.path=java/js/antlr4/atn/Transition.js
 372.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 202.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 58.baseType=DIRECTORY
@@ -1060,7 +1060,7 @@
 243.path=TextureTeapotBrass.png
 6.set=ASSET
 197.set=ASSET
-106.path=classes.dex
+106.path=java/android.jar
 362.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 139.path=ftcblockly/generators/ftcjava/variables.js
 49.set=ASSET
@@ -1146,7 +1146,7 @@
 217.path=java/templates/PushbotTeleopTank_Iterative
 239.set=ASSET
 33.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
-117.set=ASSET
+117.set=DEX
 336.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 37.baseType=DIRECTORY
 190.set=ASSET
@@ -1206,7 +1206,7 @@
 87.path=blocks/toolbox_util.js
 297.baseType=DIRECTORY
 296.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
-224.set=DEX
+224.set=ASSET
 9.path=blocks/android_accelerometer.js
 126.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 102.set=ASSET
@@ -1246,7 +1246,7 @@
 328.path=java/js/antlr4/atn/ParserATNSimulator.js
 98.baseType=DIRECTORY
 168.baseType=DIRECTORY
-67.path=blocks/lynx_i2c_color_range_sensor.js
+67.path=classes.dex
 146.baseType=DIRECTORY
 276.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 174.baseType=DIRECTORY
@@ -1263,7 +1263,7 @@
 15.path=images/ftcGamepad.png
 147.path=java/templates/SensorHTGyro
 318.path=java/templates/BasicOpMode_Iterative
-224.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/11
+224.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 363.set=ASSET
 286.set=ASSET
 38.baseType=DIRECTORY
@@ -1380,7 +1380,7 @@ count=390
 162.path=blocks/vuforia.js
 109.baseType=DIRECTORY
 73.baseType=DIRECTORY
-106.set=DEX
+106.set=ASSET
 115.baseType=DIRECTORY
 143.baseType=DIRECTORY
 72.path=images/ftcTouchSensor.png
@@ -1415,7 +1415,7 @@ count=390
 236.set=ASSET
 379.path=css/bootstrap.css
 114.set=ASSET
-115.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/transforms/dexMerger/debug/17
+115.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 209.path=java/js/ftclangtools.js
 25.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 299.baseType=DIRECTORY
@@ -1521,7 +1521,7 @@ count=390
 249.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 190.path=java/js/mode-java.js
 10.baseType=DIRECTORY
-224.path=classes.dex
+224.path=RobotConfigDescriptionGenerate.xslt
 58.set=ASSET
 310.base=/home/edgar/Desktop/ftc_app/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 309.set=ASSET

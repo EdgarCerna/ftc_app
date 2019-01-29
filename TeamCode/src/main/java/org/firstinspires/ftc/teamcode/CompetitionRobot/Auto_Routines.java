@@ -58,7 +58,7 @@ abstract public class Auto_Routines extends LinearOpMode {
     }
     
     public void raiseLiftMotor() {
-        moveLiftMotor(10690, 1);
+        moveLiftMotor(12000, 1);
         while(robot.liftMotor.isBusy() && !isStopRequested()){
             telemetry.addData("Status", "liftMotor Raising");
             telemetry.update();
@@ -67,7 +67,7 @@ abstract public class Auto_Routines extends LinearOpMode {
     }
     
     public void lowerLiftMotor() {
-        moveLiftMotor(-10690, 1);
+        moveLiftMotor(-12000, 1);
         while(robot.liftMotor.isBusy() && !isStopRequested()){
             telemetry.addData("Status", "liftMotor Lowering");
             telemetry.update();
@@ -113,6 +113,245 @@ abstract public class Auto_Routines extends LinearOpMode {
         robot.rearLeftDrive.setPower(speed);
         robot.frontRightDrive.setPower(speed);
         robot.rearRightDrive.setPower(speed);
+    }
+
+    // NEEDS TO BE FINISHED
+    public void noRightTM() {
+        // PID DRIVE TO GOLD
+        stopResetDriveEncoders();
+        while (robot.frontLeftDrive.getCurrentPosition() < 2500 && robot.frontRightDrive.getCurrentPosition() < 2500) {
+            pidDriveTowardGold();
+        }
+
+        // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
+        stopResetDriveEncoders();
+        moveDriveEncoder(2500, 2500, .6);
+        while(driveMotorsBusy() && !isStopRequested()){
+            telemetry.addData("Status", "Driving Forward To TM Drop Off");
+            telemetry.addData("goldPos", goldPos);
+            telemetry.update();
+        }
+        setDriveMotors(0);
+
+        // TURN TO DEPOT BASED ON goldPos
+        if (goldPos == 'R') {
+            stopResetDriveEncoders();
+            moveDriveEncoder(-2500, -2500, .6);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+                telemetry.addData("goldPos", goldPos);
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+        else if (goldPos == 'L') {
+            // TURN RIGHT TO FACE DEPOT
+            moveDriveEncoder(1800, -1800, .5);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Turning To TM Drop Off");
+                telemetry.update();
+            }
+
+            // DRIVE FORWARD INTO DEPOT
+            stopResetDriveEncoders();
+            moveDriveEncoder(1600, 1600, .4);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+
+        //TURNS SERVO TO DROP TEAM MARKER
+        deployMarker();
+        sleep(300);
+
+
+        // TURN TO DEPOT BASED ON goldPos
+        if (goldPos == 'R') {
+//            moveDriveEncoder(-2100, -2100, .5);
+//            while(driveMotorsBusy() && !isStopRequested()){
+//                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+//                telemetry.update();
+//            }
+//
+//            // DRIVE FORWARD INTO DEPOT
+//            stopResetDriveEncoders();
+//            moveDriveEncoder(2000, -2000, .5);
+//            while(driveMotorsBusy() && !isStopRequested()){
+//                telemetry.addData("Status", "Turning To TM Drop Off");
+//                telemetry.update();
+//            }
+//
+//            // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
+//            stopResetDriveEncoders();
+//            moveDriveEncoder(-2500, -2500, .6);
+//            while(driveMotorsBusy() && !isStopRequested()){
+//                telemetry.addData("Status", "Driving Backwards away from TM Drop Off");
+//                telemetry.addData("goldPos", goldPos);
+//                telemetry.update();
+//            }
+//            setDriveMotors(0);
+        }
+        else if (goldPos == 'L') {
+            moveDriveEncoder(-1600, -1600, .4);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+                telemetry.update();
+            }
+
+            // POTENTIALLY UNNEEDED TURN
+//            stopResetDriveEncoders();
+//            moveDriveEncoder(-1800, 1800, .5);
+//            while(driveMotorsBusy() && !isStopRequested()){
+//                telemetry.addData("Status", "Turning To TM Drop Off");
+//                telemetry.update();
+//            }
+
+            // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
+            stopResetDriveEncoders();
+            moveDriveEncoder(-2500, -2500, .6);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Backwards away from TM Drop Off");
+                telemetry.addData("goldPos", goldPos);
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+        else if (goldPos == 'C') {
+            // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
+            stopResetDriveEncoders();
+            moveDriveEncoder(-2500, -2500, .6);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Backwards away from TM Drop Off");
+                telemetry.addData("goldPos", goldPos);
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+    }
+
+    // NEEDS TO BE FINISHED
+    public void newTMRoutine() {
+        // PID DRIVE TO GOLD
+        stopResetDriveEncoders();
+        while (robot.frontLeftDrive.getCurrentPosition() < 2500 && robot.frontRightDrive.getCurrentPosition() < 2500) {
+            pidDriveTowardGold();
+        }
+
+        // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
+        stopResetDriveEncoders();
+        moveDriveEncoder(2500, 2500, .6);
+        while(driveMotorsBusy() && !isStopRequested()){
+            telemetry.addData("Status", "Driving Forward To TM Drop Off");
+            telemetry.addData("goldPos", goldPos);
+            telemetry.update();
+        }
+        setDriveMotors(0);
+
+        // TURN TO DEPOT BASED ON goldPos
+        if (goldPos == 'R') {
+            // TURN LEFT TO FACE DEPOT
+            moveDriveEncoder(-2000, 2000, .5);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Turning To TM Drop Off");
+                telemetry.update();
+            }
+
+            // DRIVE FORWARD INTO DEPOT
+            stopResetDriveEncoders();
+            moveDriveEncoder(2100, 2100, .5);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+        else if (goldPos == 'L') {
+            // TURN RIGHT TO FACE DEPOT
+            moveDriveEncoder(1800, -1800, .5);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Turning To TM Drop Off");
+                telemetry.update();
+            }
+
+            // DRIVE FORWARD INTO DEPOT
+            stopResetDriveEncoders();
+            moveDriveEncoder(1600, 1600, .4);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+
+        //TURNS SERVO TO DROP TEAM MARKER
+        deployMarker();
+        sleep(300);
+
+
+        // TURN TO DEPOT BASED ON goldPos
+        if (goldPos == 'R') {
+//            moveDriveEncoder(-2100, -2100, .5);
+//            while(driveMotorsBusy() && !isStopRequested()){
+//                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+//                telemetry.update();
+//            }
+//
+//            // DRIVE FORWARD INTO DEPOT
+//            stopResetDriveEncoders();
+//            moveDriveEncoder(2000, -2000, .5);
+//            while(driveMotorsBusy() && !isStopRequested()){
+//                telemetry.addData("Status", "Turning To TM Drop Off");
+//                telemetry.update();
+//            }
+//
+//            // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
+//            stopResetDriveEncoders();
+//            moveDriveEncoder(-2500, -2500, .6);
+//            while(driveMotorsBusy() && !isStopRequested()){
+//                telemetry.addData("Status", "Driving Backwards away from TM Drop Off");
+//                telemetry.addData("goldPos", goldPos);
+//                telemetry.update();
+//            }
+//            setDriveMotors(0);
+        }
+        else if (goldPos == 'L') {
+            moveDriveEncoder(-1600, -1600, .4);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Forward To TM Drop Off");
+                telemetry.update();
+            }
+
+            // POTENTIALLY UNNEEDED TURN
+//            stopResetDriveEncoders();
+//            moveDriveEncoder(-1800, 1800, .5);
+//            while(driveMotorsBusy() && !isStopRequested()){
+//                telemetry.addData("Status", "Turning To TM Drop Off");
+//                telemetry.update();
+//            }
+
+            // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
+            stopResetDriveEncoders();
+            moveDriveEncoder(-2500, -2500, .6);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Backwards away from TM Drop Off");
+                telemetry.addData("goldPos", goldPos);
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
+        else if (goldPos == 'C') {
+            // DRIVE FORWARD 2000 ENCODER TICKS TO MOVE AWAY FROM MINERALS
+            stopResetDriveEncoders();
+            moveDriveEncoder(-2500, -2500, .6);
+            while(driveMotorsBusy() && !isStopRequested()){
+                telemetry.addData("Status", "Driving Backwards away from TM Drop Off");
+                telemetry.addData("goldPos", goldPos);
+                telemetry.update();
+            }
+            setDriveMotors(0);
+        }
     }
 
     public void tmRoutine() {

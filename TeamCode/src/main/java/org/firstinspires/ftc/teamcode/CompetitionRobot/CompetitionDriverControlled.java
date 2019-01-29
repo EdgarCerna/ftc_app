@@ -24,13 +24,29 @@ public class CompetitionDriverControlled extends OpMode{
     //LOOP ON start()
     @Override
     public void loop() {
+        int modeNumber = 0;
         double leftTrigger = -gamepad1.left_trigger;
         double rightTrigger = gamepad1.right_trigger;
         double rightStickX = gamepad1.right_stick_x;
         double rightPowerT = leftTrigger + rightTrigger - rightStickX;
         double leftPowerT = leftTrigger + rightTrigger + rightStickX;
 
-        // LIFT CODE
+        // SET MODE NUMBER TO EITHER 0 OR 1
+        if (gamepad1.b) {
+            modeNumber++;
+            if (modeNumber > 1)
+                modeNumber = 0;
+        }
+
+        // ARM LIFT CODE
+        if (gamepad1.y)
+            robot.armMotor.setPower(1);
+        else if (gamepad1.a)
+            robot.armMotor.setPower(-1);
+        else
+            robot.armMotor.setPower(0);
+
+        // ROBOT LIFT CODE
         if (gamepad1.right_bumper)
             robot.liftMotor.setPower(1);
         else if (gamepad1.left_bumper)
@@ -38,30 +54,53 @@ public class CompetitionDriverControlled extends OpMode{
         else
             robot.liftMotor.setPower(0);
 
-        // STRAFE CODE
-        if (gamepad1.dpad_right) {
-            robot.frontLeftDrive.setPower(-1);
-            robot.frontRightDrive.setPower(1);
-            robot.rearLeftDrive.setPower(1);
-            robot.rearRightDrive.setPower(-1);
+        // DRIVING BASED ON modeNumber
+        if (modeNumber == 0) {
+            telemetry.addData("DriveMode", "Standard");
+            telemetry.update();
+            // STRAFE CODE
+            if (gamepad1.dpad_right) {
+                robot.frontLeftDrive.setPower(1);
+                robot.frontRightDrive.setPower(-1);
+                robot.rearLeftDrive.setPower(-1);
+                robot.rearRightDrive.setPower(1);
+            }
+            else if (gamepad1.dpad_left) {
+                robot.frontLeftDrive.setPower(-1);
+                robot.frontRightDrive.setPower(1);
+                robot.rearLeftDrive.setPower(1);
+                robot.rearRightDrive.setPower(-1);
+            }
+            else {
+                robot.frontLeftDrive.setPower(leftPowerT);
+                robot.rearLeftDrive.setPower(leftPowerT);
+                robot.frontRightDrive.setPower(rightPowerT);
+                robot.rearRightDrive.setPower(rightPowerT);
+            }
         }
-        else if (gamepad1.dpad_left) {
-            robot.frontLeftDrive.setPower(1);
-            robot.frontRightDrive.setPower(-1);
-            robot.rearLeftDrive.setPower(-1);
-            robot.rearRightDrive.setPower(1);
+        else if (modeNumber == 1) {
+            telemetry.addData("DriveMode", "Arm");
+            telemetry.update();
+            // STRAFE CODE
+            if (gamepad1.dpad_right) {
+                robot.frontLeftDrive.setPower(1);
+                robot.frontRightDrive.setPower(1);
+                robot.rearLeftDrive.setPower(1);
+                robot.rearRightDrive.setPower(1);
+            }
+            else if (gamepad1.dpad_left) {
+                robot.frontLeftDrive.setPower(-1);
+                robot.frontRightDrive.setPower(-1);
+                robot.rearLeftDrive.setPower(-1);
+                robot.rearRightDrive.setPower(-1);
+            }
+            else {
+                robot.frontLeftDrive.setPower(-rightPowerT);
+                robot.rearLeftDrive.setPower(leftPowerT);
+                robot.frontRightDrive.setPower(rightPowerT);
+                robot.rearRightDrive.setPower(-leftPowerT);
+            }
         }
-        else {
-            robot.frontLeftDrive.setPower(leftPowerT);
-            robot.rearLeftDrive.setPower(leftPowerT);
-            robot.frontRightDrive.setPower(rightPowerT);
-            robot.rearRightDrive.setPower(rightPowerT);
-        }
-
-        //Send Telemetry Data
-        telemetry.addData("LeftPower",  "%.2f", leftTrigger);
-        telemetry.addData("RightPower", "%.2f", rightTrigger);
-        telemetry.update();
     }
 
     //RUN ONCE ON stop()
