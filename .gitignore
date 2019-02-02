@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/java,opencv,androidstudio
-# Edit at https://www.gitignore.io/?templates=java,opencv,androidstudio
+# Created by https://www.gitignore.io/api/java,gradle,opencv,androidstudio
+# Edit at https://www.gitignore.io/?templates=java,gradle,opencv,androidstudio
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
@@ -159,4 +159,22 @@ fabric.properties
 */Makefile
 */cmake_install.cmake
 
-# End of https://www.gitignore.io/api/java,opencv,androidstudio
+### Gradle ###
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+### Gradle Patch ###
+**/build/
+
+# End of https://www.gitignore.io/api/java,gradle,opencv,androidstudio
